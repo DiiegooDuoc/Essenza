@@ -1,0 +1,256 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== Header ===== */
+.encabezado {
+    background: linear-gradient(135deg, #111, #333);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-principal {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.menu-principal {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu-principal li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.menu-principal li a:hover {
+    color: #f1c40f;
+}
+
+/* Botones de sesión */
+.botones-sesion {
+    display: flex;
+    gap: 15px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #f1c40f;
+    color: #111;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.boton:hover {
+    background: #111;
+    color: #f1c40f;
+}
+
+/* ===== Main ===== */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== Producto Detalle ===== */
+.producto-detalle .detalle-producto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.producto-detalle img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.info-producto {
+    max-width: 400px;
+}
+
+.info-producto h2 {
+    margin-bottom: 15px;
+}
+
+.precio {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Cantidad y botones */
+.cantidad-carrito {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cantidad-carrito button {
+    padding: 5px 12px;
+    font-size: 1rem;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cantidad-carrito button:hover {
+    background: #f1c40f;
+    color: #111;
+}
+
+.cantidad-carrito input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+/* Botones de compra */
+.botones-compra {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botones-compra button {
+    padding: 10px 15px;
+    background: #f1c40f;
+    color: #111;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.botones-compra button:hover {
+    background: #111;
+    color: #f1c40f;
+}
+
+/* ===== Información y Métodos de Pago ===== */
+.info-pago {
+    margin-top: 40px;
+}
+
+.info-pago h2 {
+    margin-bottom: 10px;
+    border-bottom: 3px solid #f1c40f;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.info-pago p,
+.info-pago ul {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.info-pago ul {
+    list-style: disc inside;
+}
+
+/* ===== Reseñas ===== */
+.reseñas {
+    margin-top: 40px;
+}
+
+.reseñas h2 {
+    margin-bottom: 10px;
+    border-bottom: 3px solid #f1c40f;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.reseñas p {
+    font-style: italic;
+    color: #555;
+}
+
+/* ===== Footer ===== */
+.pie {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* Botón Comprar Ahora */
+.comprar-ahora {
+    width: 100%;
+    padding: 15px;
+    background: #e74c3c; /* Rojo llamativo */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+.comprar-ahora:hover {
+    background: #c0392b;
+    transform: scale(1.03);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 800px) {
+    .producto-detalle .detalle-producto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto-detalle img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-producto {
+        max-width: 100%;
+        text-align: center;
+    }
+}
